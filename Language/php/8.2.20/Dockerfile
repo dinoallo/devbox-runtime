@@ -1,4 +1,5 @@
 FROM ghcr.io/labring-actions/devbox/debian-ssh-12.6:a5f75b3
+# Set the user to root
 USER root
 
 RUN apt update && \
