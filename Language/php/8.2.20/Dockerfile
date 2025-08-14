@@ -18,6 +18,6 @@ USER devbox
 RUN mkdir -p /home/devbox/.devbox && \
     if [ -d /home/devbox/project ]; then cd /home/devbox/project && rm -rf ./*; fi
 
-COPY /Language/php/project /home/devbox/project
+COPY --chown=devbox:devbox /Language/php/project /home/devbox/project
 
 RUN chmod +x /home/devbox/project/entrypoint.sh
